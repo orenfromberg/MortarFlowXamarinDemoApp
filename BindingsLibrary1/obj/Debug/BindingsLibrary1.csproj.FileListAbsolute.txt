@@ -1,5 +1,0 @@
-c:\users\oren.fromberg\documents\visual studio 2013\Projects\MortarFlowDemoApp\BindingsLibrary1\bin\Debug\BindingsLibrary1.dll
-c:\users\oren.fromberg\documents\visual studio 2013\Projects\MortarFlowDemoApp\BindingsLibrary1\bin\Debug\BindingsLibrary1.pdb
-c:\users\oren.fromberg\documents\visual studio 2013\Projects\MortarFlowDemoApp\BindingsLibrary1\obj\Debug\BindingsLibrary1.csprojResolveAssemblyReference.cache
-c:\users\oren.fromberg\documents\visual studio 2013\Projects\MortarFlowDemoApp\BindingsLibrary1\obj\Debug\BindingsLibrary1.dll
-c:\users\oren.fromberg\documents\visual studio 2013\Projects\MortarFlowDemoApp\BindingsLibrary1\obj\Debug\BindingsLibrary1.pdb

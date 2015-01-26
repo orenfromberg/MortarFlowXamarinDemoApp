@@ -68,6 +68,16 @@
   <ItemGroup>
     <Content Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BindingsLibrary1\BindingsLibrary1.csproj">
+      <Project>{b65c13f0-174b-4c0d-ae56-022d7de98db8}</Project>
+      <Name>BindingsLibrary1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BindingsLibrary2\BindingsLibrary2.csproj">
+      <Project>{c1902be3-a6c8-4613-b687-920366046f5d}</Project>
+      <Name>BindingsLibrary2</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
      Other similar extension points exist, see Microsoft.Common.targets.
