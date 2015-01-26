@@ -1,0 +1,4 @@
+c:\users\oren.fromberg\documents\visual studio 2013\Projects\MortarFlowDemoApp\BindingsLibrary2\bin\Debug\BindingsLibrary2.dll
+c:\users\oren.fromberg\documents\visual studio 2013\Projects\MortarFlowDemoApp\BindingsLibrary2\bin\Debug\BindingsLibrary2.pdb
+c:\users\oren.fromberg\documents\visual studio 2013\Projects\MortarFlowDemoApp\BindingsLibrary2\obj\Debug\BindingsLibrary2.dll
+c:\users\oren.fromberg\documents\visual studio 2013\Projects\MortarFlowDemoApp\BindingsLibrary2\obj\Debug\BindingsLibrary2.pdb

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<api>
+<package name="flow">
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Backstack.1" static="true" visibility=""/>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="Backstack.Builder" static="true" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="addAll" native="false" return="flow.Backstack.Builder" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.util.Collection&lt;java.lang.Object&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="build" native="false" return="flow.Backstack" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="clear" native="false" return="flow.Backstack.Builder" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="pop" native="false" return="flow.Backstack.Entry" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="push" native="false" return="flow.Backstack.Builder" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.Object">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="Backstack.Entry" static="true" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="getId" native="false" return="long" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getScreen" native="false" return="java.lang.Object" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Backstack.ReadIterator" static="true" visibility="">
+<typeParameters>
+<typeParameter name="T"/>
+</typeParameters>
+<implements name="java.util.Iterator" name-generic-aware="java.util.Iterator&lt;T&gt;">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="Backstack.ReadIterator" static="false" type="flow.Backstack.ReadIterator" visibility="public">
+<parameter name="p0" type="java.util.Iterator&lt;T&gt;">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="hasNext" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="next" native="false" return="T" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="remove" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="Flow" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Flow" static="false" type="flow.Flow" visibility="public">
+<parameter name="p0" type="flow.Backstack">
+</parameter>
+<parameter name="p1" type="flow.Flow.Listener">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="backward" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="flow.Backstack">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="forward" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="flow.Backstack">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getBackstack" native="false" return="flow.Backstack" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="goBack" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="goTo" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.Object">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="goUp" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="replaceTo" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.Object">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="resetTo" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.Object">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;flow.Flow.Direction&gt;" final="true" name="Flow.Direction" static="true" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="valueOf" native="false" return="flow.Flow.Direction" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="values" native="false" return="flow.Flow.Direction[]" static="true" synchronized="false" visibility="public">
+</method>
+<field deprecated="not deprecated" final="true" name="BACKWARD" static="true" transient="false" type="flow.Flow.Direction" type-generic-aware="flow.Flow.Direction" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="FORWARD" static="true" transient="false" type="flow.Flow.Direction" type-generic-aware="flow.Flow.Direction" visibility="public" volatile="false">
+</field>
+</class>
+<interface abstract="true" deprecated="not deprecated" final="false" name="Flow.Listener" static="true" visibility="public">
+<method abstract="true" deprecated="not deprecated" final="false" name="go" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="flow.Backstack">
+</parameter>
+<parameter name="p1" type="flow.Flow.Direction">
+</parameter>
+</method>
+</interface>
+<interface abstract="true" deprecated="not deprecated" final="false" name="HasParent" static="false" visibility="public">
+<typeParameters>
+<typeParameter name="T"/>
+</typeParameters>
+<method abstract="true" deprecated="not deprecated" final="false" name="getParent" native="false" return="T" static="false" synchronized="false" visibility="public">
+</method>
+</interface>
+<interface abstract="true" deprecated="not deprecated" final="false" name="Layout" static="false" visibility="public">
+<implements name="java.lang.annotation.Annotation" name-generic-aware="java.lang.annotation.Annotation">
+</implements>
+<method abstract="true" deprecated="not deprecated" final="false" name="value" native="false" return="int" static="false" synchronized="false" visibility="public">
+</method>
+</interface>
+</package>
+<package name="mortar">
+<interface abstract="true" deprecated="not deprecated" final="false" name="Blueprint" static="false" visibility="public">
+<method abstract="true" deprecated="not deprecated" final="false" name="getDaggerModule" native="false" return="java.lang.Object" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="getMortarScopeName" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+</method>
+</interface>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="MortarScopeDevHelper" static="false" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="scopeHierarchyToString" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="mortar.MortarScope">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="MortarScopeDevHelper.1" static="true" visibility=""/>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="MortarScopeDevHelper.InjectNode" static="true" visibility="">
+<implements name="mortar.MortarScopeDevHelper.Node" name-generic-aware="mortar.MortarScopeDevHelper.Node">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="getChildNodes" native="false" return="java.util.List&lt;mortar.MortarScopeDevHelper.Node&gt;" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getName" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="MortarScopeDevHelper.ModuleNode" static="true" visibility="">
+<implements name="mortar.MortarScopeDevHelper.Node" name-generic-aware="mortar.MortarScopeDevHelper.Node">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="getChildNodes" native="false" return="java.util.List&lt;mortar.MortarScopeDevHelper.Node&gt;" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getName" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="MortarScopeDevHelper.ModuleNode.1" static="true" visibility="">
+<implements name="mortar.MortarScopeDevHelper.Node" name-generic-aware="mortar.MortarScopeDevHelper.Node">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="getChildNodes" native="false" return="java.util.List&lt;mortar.MortarScopeDevHelper.Node&gt;" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getName" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="MortarScopeDevHelper.MortarScopeNode" static="true" visibility="">
+<implements name="mortar.MortarScopeDevHelper.Node" name-generic-aware="mortar.MortarScopeDevHelper.Node">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="getChildNodes" native="false" return="java.util.List&lt;mortar.MortarScopeDevHelper.Node&gt;" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getName" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<interface abstract="true" deprecated="not deprecated" final="false" name="MortarScopeDevHelper.Node" static="true" visibility="">
+<method abstract="true" deprecated="not deprecated" final="false" name="getChildNodes" native="false" return="java.util.List&lt;mortar.MortarScopeDevHelper.Node&gt;" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="getName" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+</method>
+</interface>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="MortarScopeDevHelper.NodeSorter" static="true" visibility="">
+<implements name="java.util.Comparator" name-generic-aware="java.util.Comparator&lt;mortar.MortarScopeDevHelper.Node&gt;">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="compare" native="false" return="int" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.Object">
+</parameter>
+<parameter name="p1" type="java.lang.Object">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="RealActivityScope.1" static="true" visibility=""/>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;mortar.RealActivityScope.LoadingState&gt;" final="true" name="RealActivityScope.LoadingState" static="true" visibility="">
+<field deprecated="not deprecated" final="true" name="IDLE" static="true" transient="false" type="mortar.RealActivityScope.LoadingState" type-generic-aware="mortar.RealActivityScope.LoadingState" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="LOADING" static="true" transient="false" type="mortar.RealActivityScope.LoadingState" type-generic-aware="mortar.RealActivityScope.LoadingState" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="SAVING" static="true" transient="false" type="mortar.RealActivityScope.LoadingState" type-generic-aware="mortar.RealActivityScope.LoadingState" visibility="public" volatile="false">
+</field>
+</class>
+<interface abstract="true" deprecated="not deprecated" final="false" name="Scoped" static="false" visibility="public">
+<method abstract="true" deprecated="not deprecated" final="false" name="onDestroy" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</interface>
+</package>
+</api>
